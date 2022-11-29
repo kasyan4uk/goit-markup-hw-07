@@ -106,7 +106,7 @@ header {
     line-height: 1.19;     
 }
 
-.logo-studio {
+.logo__studio {
     color: var(--logo-black);
 }
 
@@ -115,12 +115,12 @@ header {
     margin-left: 93px;
 }
 
-.site-nav .item:not(:last-child) {
+.site-nav__item:not(:last-child) {
     margin-right: 50px;
 }
 
 
-.site-nav .link {
+.site-nav__link {
     position: relative;
     color: var(--title-text-color);
     padding-top: 32px;
@@ -133,15 +133,15 @@ header {
     transition: color var(--timing-function);
 }
 
-.site-nav .link:hover, .site-nav a:focus {
+.site-nav__link:hover, .site-nav__link:focus {
     color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.site-nav__link--current {
     color: var(--accent-color);;
 }
 
-.link.current::after {
+.site-nav__link--current::after {
     content: "";
 
     position: absolute;
@@ -160,7 +160,7 @@ header {
     margin-left: auto;
 }
 
-.icon-address {
+.header-address__icon {
     vertical-align: middle;
     margin-right: 10px;
     fill: var(--main-text-color);
@@ -169,15 +169,15 @@ header {
     transition: fill var(--timing-function);
 }
 
-.header-address a:hover .icon-address, .header-address a:focus .icon-address {
+.header-address__link:hover .header-address__icon, .header-address__link:focus .header-address__icon {
     fill: var(--accent-color);
 }
 
-.header-address .item:not(:last-child) {
+.header-address__item:not(:last-child) {
     margin-right: 50px;
 }
 
-.header-address a {
+.header-address__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,7 +195,7 @@ header {
 }
 
 
-.header-address a:hover, .header-address a:focus {
+.header-address__link:hover, .header-address__link:focus {
 color: var(--accent-color);
 }
 
@@ -218,7 +218,7 @@ color: var(--accent-color);
     padding: 200px 0;
 }
 
-.hero-title {
+.hero__title {
     color: var(--background-color);
     max-width: 696px;
     margin: 0 auto 30px;
@@ -252,15 +252,15 @@ color: var(--accent-color);
 }
 
 /**переваги */
-.section.advantage {
+.advantage {
     padding-bottom: 0px;
 }
 
-.section-benefits {
+.advantage__benefits {
     display: flex;
 }
 
-.icon-benefits {
+.advantage__icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -274,15 +274,15 @@ color: var(--accent-color);
 }
 
 
-.section-benefits .item{
+.advantage__item{
     width: 270px;
 }
 
-.section-benefits .item + .item {
+.advantage__item + .advantage__item {
     margin-left: 30px;
 }
 
-.section-caption {
+.advantage__caption {
     color: var(--title-text-color);
 
     font-size: 14px;
@@ -290,7 +290,7 @@ color: var(--accent-color);
     padding-bottom: 10px;
 }
 
-.section-text {
+.advantage__text {
 
     font-size: 14px;
     line-height: 1.71;
@@ -308,15 +308,15 @@ color: var(--accent-color);
     margin-bottom: 50px;
 }
 
-.section-work {
+.work__list {
     display: flex;
 }
 
-.section-work .item {
+.work__item {
     position: relative;
 }
 
-.work-text {
+.work__text {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -332,7 +332,7 @@ color: var(--accent-color);
     background-color: var(--work-background);
 }
 
-.section-work .item + .item {
+.work__item + .work__item {
     margin-left: 30px;
 }
 
@@ -342,28 +342,28 @@ color: var(--accent-color);
     background-color: var(--button-fiter-background);
 }
 
-.list-team {
+.team__list {
     display:flex;
     text-align: center;
 }
 
-.team-icon {
+.social-list {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
 }
 
-.icon-social {
+.social-list_icon {
     fill: var(--social-icon-grey);
     transition: fill var(--timing-function);
 }
 
-.icon-list:hover .icon-social{
+.social-list__item:hover .social-list_icon{
     fill: var(--background-color);
 }
 
-.icon-list {
+.social-list__item {
     display:flex;
     width: 44px;
     height: 44px;
@@ -373,7 +373,7 @@ color: var(--accent-color);
     justify-content: center;
 }
 
-.icon-list a {
+.social-list__link {
     width: 100%;
     height: 100%;
     display: flex;
@@ -384,15 +384,15 @@ color: var(--accent-color);
     transition: background-color var(--timing-function);
 }
 
-.team-icon :hover, .team-icon :focus{
+.social-list :hover, .social-list :focus{
     background-color: var(--accent-color);
 }
 
-.team-icon .icon-list+.icon-list {
+.social-list__item + .social-list__item {
     margin-left: 10px;
 }
 
-.list-team .item {
+.team__item {
     width: 270px;
     margin-right: 30px;
 
@@ -402,12 +402,12 @@ color: var(--accent-color);
     border-radius: 0px 0px 4px 4px;
 }
 
-.list-team .item:last-child {
+.team__item:last-child {
     margin-right: 0px;
 }
 
 
-.section-subject {
+.team__name {
     color: var(--title-text-color);
     margin-top: 30px;
 
@@ -417,7 +417,7 @@ color: var(--accent-color);
 }
 
 /**спеціальність команди */
-.section-subtitle {
+.team__job {
     margin-top: 10px;
     margin-bottom: 16px;
 
@@ -426,17 +426,17 @@ color: var(--accent-color);
 }
 
 /**clients */
-.clients-list {
+.clients__list {
     display: flex;
     font-size: 0;
 }
 
-.client-icon {
+.clients__icon {
 fill: var(--social-icon-grey);
 transition: fill var(--timing-function);
 }
 
-.clients-list-icon {
+.clients__item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -450,7 +450,7 @@ transition: fill var(--timing-function);
     transition: border var(--timing-function);
 }
 
-.clients-list .clients-list-icon+.clients-list-icon {
+.clients__item + .clients__item {
     margin-left: 29px;
 }
 
@@ -458,12 +458,12 @@ transition: fill var(--timing-function);
     padding: 94px;
 }
 
-.clients-list-icon:hover {
+.clients__item:hover {
     border:1px solid var(--accent-color);
     cursor: pointer;
 }
 
-.clients-list-icon:hover .client-icon{
+.clients__item:hover .clients__icon{
     fill: var(--accent-color);
 }
 
@@ -473,24 +473,22 @@ transition: fill var(--timing-function);
     background: var(--footer-background);
 }
 
-.container.down {
+.container-footer {
     display: flex;
 }
 
-.footer-address-list {
-    margin-top: 20px;
-}
 
-
-.tumb> a > .logo-studio {
+.logo__studio--footer {
     color: var(--background-color);
 }
 
-.address-list .item+.item {
+.footer-address__item + .footer-address__item {
     margin-top: 9px;
 }
 
 .footer-address {
+    margin-top: 20px;
+
     color: var(--background-color);
 
     font-style: normal;
@@ -498,19 +496,23 @@ transition: fill var(--timing-function);
     line-height: 1.71;
 }
 
-.footer-contact {
+
+
+.footer-address__link {
     color: var(--footer-contact-text);
 
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
-}
-
-.footer a {
     transition: color var(--timing-function);
 }
 
-footer a:hover, footer a:focus {
+.footer-address__link--white {
+    color: var(--background-color);
+}
+
+
+.footer-address__link:hover, .footer-address__link:focus {
     color: var(--accent-color);
 }
 
@@ -523,18 +525,16 @@ footer a:hover, footer a:focus {
     margin-left: 70px;
 }
 
-.join-title {
+.join__title {
     display: inline-block;
-    margin-bottom: 20px;
 
-}
-
-.join-title{
     color: var(--background-color);
-
     font-size: 14px;
+
+    margin-bottom: 20px;
 }
-.footer-icon {
+
+.icon-list {
     display: flex;
 
 }
@@ -543,7 +543,7 @@ footer a:hover, footer a:focus {
     fill: var(--background-color);
 }
 
-.footer-list {
+.icon-list__item {
     display: flex;
     width: 44px;
     height: 44px;
@@ -554,7 +554,7 @@ footer a:hover, footer a:focus {
     justify-content: center;
 }
 
-.footer-list a {
+.icon-list__link {
     width: 100%;
     height: 100%;
     display: flex;
@@ -565,12 +565,12 @@ footer a:hover, footer a:focus {
     transition: background-color var(--timing-function);
 }
 
-.footer-icon :hover,
-.footer-icon :focus {
+.icon-list :hover,
+.icon-list :focus {
     background-color: var(--accent-color);
 }
 
-.footer-icon .footer-list+.footer-list {
+.icon-list__item + .icon-list__item {
     margin-left: 10px;
 }
 
@@ -581,7 +581,7 @@ footer a:hover, footer a:focus {
 }
 
 
-.sign-tittle {
+.sign__tittle {
     display: flex;
 
     color: var(--background-color);
@@ -590,7 +590,7 @@ footer a:hover, footer a:focus {
     margin-bottom: 20px;
 }
 
-.footer-email {
+.sign__email {
     width: 358px;
     height: 50px;
     padding-left: 16px;
@@ -609,14 +609,14 @@ footer a:hover, footer a:focus {
     border-radius: 4px;
 }
 
-.footer-email::placeholder {
+.sign__email::placeholder {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
 
-.button.sign {
+.sign__button {
     position: relative;
     text-align: left;
     width: 200px;
@@ -624,13 +624,13 @@ footer a:hover, footer a:focus {
     margin-left: 12px;
 }
 
-.button-sign-icon {
+.sign__icon {
     position: absolute;
     top: 13px;
     right: 28px;
 }
 
-.sign-list {
+.sign__list {
     display: flex;
 }
 
