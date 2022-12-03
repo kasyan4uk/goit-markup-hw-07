@@ -1,0 +1,120 @@
+.container.portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.portfolio-filter {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 50px;
+}
+
+.portfolio-filter__item+.portfolio-filter__item {
+    margin-left: 8px;
+}
+
+.portfolio-filter__button {
+    color: var(--title-text-color);
+    background-color: var(--button-fiter-background);
+
+    font-weight: 500;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+
+    padding: 6px 22px;
+    transition: background-color var(--timing-function),
+        box-shadow var(--timing-function), color var(--timing-function);
+}
+
+.portfolio-filter__button {
+    &:hover, &:focus {
+        color: var(--background-color);
+        background-color: var(--accent-color);
+        box-shadow: var(--portfolio-filter-shadow);
+    }
+}
+
+
+/**список послуг */
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.portfolio-list__item {
+    position: relative;
+    transition: box-shadow var(--timing-function);
+}
+
+.portfolio-list__item {
+    &:hover {
+        box-shadow: var(--portfolio-filter-cardshadow);
+    }
+}
+
+.portfolio-list__item {
+    &:nth-child(3n) {
+        margin-right: 0px;
+    }
+}
+
+.portfolio-list__item {
+    &:nth-last-child(-n +3) {
+        margin-bottom: 0px;
+    }
+}
+
+.portfolio-list__title {
+    color: var(--title-text-color);
+
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.portfolio-list__container {
+    border: 1px solid var(--border-portfolio);
+    border-top: none;
+    padding: 20px 24px;
+}
+
+.portfolio-list__text {
+    margin-top: 4px;
+
+    font-size: 16px;
+    line-height: 1.87;
+}
+
+.portfolio-list__card {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.portfolio-list__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 63px 23px;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--background-color);
+    background-color: var(--card-transition-color);
+
+    transform: translateY(100%);
+    transition: transform var(--timing-function);
+
+}
+ 
+.portfolio-list__item {
+    &:hover .portfolio-list__overlay{
+    transform: translateY(0);
+    }
+}

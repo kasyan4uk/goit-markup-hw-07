@@ -32,6 +32,13 @@
     --footer-email-border: rgba(255, 255, 255, 0.3);
 }
    
+body {
+    background: var(--background-color);
+    color: var(--main-text-color);
+
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.03em;
+}
 
 .visually-hidden {
     position: absolute;
@@ -44,15 +51,6 @@
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
-}
-
-
-body {
-    background: var(--background-color);
-    color: var(--main-text-color);
-
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.03em;
 }
 
 a{
@@ -138,7 +136,7 @@ header {
 }
 
 .site-nav__link--current {
-    color: var(--accent-color);;
+    color: var(--accent-color);
 }
 
 .site-nav__link--current::after {
@@ -878,6 +876,7 @@ transition: fill var(--timing-function);
 
     transition: var(--timing-function);
 }
+
 
 .form-input.comment {
     resize: none;
