@@ -11,15 +11,15 @@
     margin-right: auto;
 
     padding: 200px 0;
-}
 
-.hero__title {
-    color: var(--background-color);
-    max-width: 696px;
-    margin: 0 auto 30px;
-
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
+    &__title {
+            color: var(--background-color);
+            max-width: 696px;
+            margin: 0 auto 30px;
+    
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 1.36;
+            letter-spacing: 0.06em;
+        }
 }

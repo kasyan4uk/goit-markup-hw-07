@@ -15,13 +15,14 @@
     pointer-events: none;
     opacity: 0;
 
-}
-
-.backdrop.is-hidden {
     .modal {
             transform: translate(-50%, -50%) scale(0.9);
         }
-}
+    }
+
+
+
+
 
 .modal {
     position: absolute;
@@ -35,120 +36,121 @@
 
     background-color: var(--background-color);
     border-radius: 4px;
-}
 
-.modal-button {
-    position: absolute;
-    top: 8px;
-    right: 8px;
+    &-button {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+    
+            width: 30px;
+            height: 30px;
+            border: 1px solid var(--modal-close);
+            border-radius: 50%;
+    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+    
+            background-color: var(--background-color);
+            transition: var(--timing-function);
+    }
 
-    width: 30px;
-    height: 30px;
-    border: 1px solid var(--modal-close);
-    border-radius: 50%;
+    &-button {
+        &:hover {
+            fill: var(--accent-color);
+        }
+    }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+    &-tittle {
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 0.03em;
+    
+        color: var(--title-text-color);
+        margin: 40px 40px 30px 40px;
+    }
 
-    background-color: var(--background-color);
-    transition: var(--timing-function);
-}
+    &-icon {
+        fill: var(--title-text-color);
+    }
 
-.modal-button {
-    &:hover {
-        fill: var(--accent-color);
+    &-icon {
+        position: absolute;
+        top: 0;
+        left: 12px;
+        transform: translateY(28px);
+    
+        transition: var(--timing-function);
     }
 }
 
-.modal-tittle {
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.03em;
-
-    color: var(--title-text-color);
-    margin: 40px 40px 30px 40px;
-}
 
 .form {
     padding-left: 40px;
     padding-right: 40px;
-}
 
-.form-field {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.form-field+.form-field {
-    margin-top: 10px;
-}
-
-
-.form-label {
-    display: flex;
-    flex-direction: column;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-}
-
-.form-input {
-    padding: 0;
-    padding-left: 42px;
-    margin-top: 4px;
-    border-radius: 4px;
-    border: 1px solid var(--modal-field-border);
-    height: 40px;
-    cursor: pointer;
-    transition: var(--timing-function);
-    outline: none;
-}
-
-.form-input {
-    &:hover, :focus:not(:focus-visible) {
-        border: 1px solid var(--accent-color);
-        outline: none;
+    &-field {
+            position: relative;
+            display: flex;
+            flex-direction: column;
     }
-}
 
-.modal-icon {
-    fill: var(--title-text-color);
-}
-
-.form-label {
-    &:hover .modal-icon {
-        fill: var(--accent-color);
+    &-field+.form-field {
+        margin-top: 10px;
     }
-}
 
-.form-input {
-    &::placeholder {
+    &-label {
+        display: flex;
+        flex-direction: column;
         font-size: 12px;
         line-height: 14px;
         letter-spacing: 0.01em;
-
-        color: var(--modal-comment-text)   
     }
-}
 
+    &-input {
+        padding: 0;
+        padding-left: 42px;
+        margin-top: 4px;
+        border-radius: 4px;
+        border: 1px solid var(--modal-field-border);
+        height: 40px;
+        cursor: pointer;
+        transition: var(--timing-function);
+        outline: none;
+    }
 
-.modal-icon {
-    position: absolute;
-    top: 0;
-    left: 12px;
-    transform: translateY(28px);
+    &-input {
+    
+        &:hover,
+        :focus:not(:focus-visible) {
+            border: 1px solid var(--accent-color);
+            outline: none;
+        }
+    }
 
-    transition: var(--timing-function);
-}
+    &-label {
+        &:hover .modal-icon {
+            fill: var(--accent-color);
+        }
+    }
 
-.form-input.comment {
-    resize: none;
-    height: 120px;
-    padding-top: 12px;
-    padding-left: 16px;
+    &-input {
+        &::placeholder {
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.01em;
+    
+            color: var(--modal-comment-text)
+        }
+    }
+
+    &-input.comment {
+        resize: none;
+        height: 120px;
+        padding-top: 12px;
+        padding-left: 16px;
+    }
 }
 
 .comment::placeholder {
@@ -163,49 +165,52 @@
     margin-top: 20px;
 }
 
-
-.checkbox-label {
-    display: flex;
-    align-items: center;
-
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    cursor: pointer;
-}
-
-.checkbox-link {
-    text-decoration-line: underline;
-    color: var(--accent-color);
-}
-
 .checkbox {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 
     position: absolute;
-}
 
-.checkbox-icon {
-    display: inline-block;
-    position: relative;
-    margin-right: 7px;
+    &-link {
+            text-decoration-line: underline;
+            color: var(--accent-color);
+    }
 
-    border: 2px solid var(--logo-black);
-    border-radius: 2px;
+    &-icon {
+        display: inline-block;
+        position: relative;
+        margin-right: 7px;
+    
+        border: 2px solid var(--logo-black);
+        border-radius: 2px;
+    
+        width: 16px;
+        height: 15px;
+    
+        transition: var(--timing-function);
+    }
 
-    width: 16px;
-    height: 15px;
+    &-label {
+        display: flex;
+        align-items: center;
+    
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        cursor: pointer;
+    }
 
-    transition: var(--timing-function);
-}
-
-.checkbox{
     &:checked+.checkbox-icon {
         border: 2px solid var(--accent-color);
     }
+
+    &:checked+.checkbox-icon>.icon-check {
+        opacity: 1;
+    }
 }
+
+
 
 .icon-check {
     display: inline-block;
@@ -221,11 +226,6 @@
     transition: var(--timing-function);
 }
 
-.checkbox {
-    &:checked + .checkbox-icon > .icon-check {
-    opacity: 1;
-    }
-}
 
 
 .button.submit {
